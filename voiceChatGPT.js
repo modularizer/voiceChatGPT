@@ -153,3 +153,5 @@ function listen(){
 	const recognition = new SpeechRecognition(textarea);
 	recognition.start();
 }
+
+listen();
