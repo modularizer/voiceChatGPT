@@ -1,8 +1,8 @@
-class SpeechRecognition {
+class voiceChat {
   // Constructor function for the SpeechRecognition class
   constructor(textarea) {
     // Initialize the WebkitSpeechRecognition API
-    this.recognition = new webkitSpeechRecognition();
+    this.recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
     // Set interimResults to true to get results even if the user is still speaking
     this.recognition.interimResults = true;
     // Initialize the speech synthesis API
@@ -150,8 +150,7 @@ class SpeechRecognition {
 
 function listen(){
 	const textarea = document.getElementsByTagName('textarea')[0];
-	const recognition = new SpeechRecognition(textarea);
-	recognition.start();
+	const recognition = new voiceChat(textarea);
 }
 
 listen();
