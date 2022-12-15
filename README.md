@@ -32,7 +32,10 @@ javascript:(()=>{class voiceChat{constructor(textarea){this.recognition=new (win
 4. talk
 5. If the code is buggy, use ChatGPT to help fix the code, then pull request your changes!!
 
-### Firefox support:
+### Browser Support:
+This code works best for Chrome becuase of its builtin `webkitSpeechRecognition` module. Firefox theoretically can do speechrecognition with its `SpeechRecognition` module, but I personally haven't gotten it to work.
+
+If you wish to try in Firefox:
 * To enable, go to `about:config`, and set `media.webspeech.recognition.force_enable` and `media.webspeech.recognition.force_enable` flags to true, then restart firefox
 ### Things I learned:
 * [webkitSpeechRecognition()](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) is a feature built into Chrome and Firefox which does speech recognition
